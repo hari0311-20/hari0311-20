@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Greeting App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .greeting {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Personalized Greeting App!</h1>
+    <p>Enter your name and get a custom greeting.</p>
+
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button onclick="generateGreeting()">Get Greeting</button>
+
+    <div class="greeting" id="greetingMessage"></div>
+
+    <script>
+        function generateGreeting() {
+            const name = document.getElementById('nameInput').value;
+            const greetingMessage = document.getElementById('greetingMessage');
+            if (name) {
+                greetingMessage.textContent = `Hello, ${name}! Welcome to our app.`;
+            } else {
+                greetingMessage.textContent = 'Please enter your name.';
+            }
+        }
+    </script>
+
+</body>
+</html>
